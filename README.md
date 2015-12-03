@@ -7,9 +7,9 @@ Foram criados dois projetos distintos, cada um implementando um job para os sist
 
 Cada projeto possui três classes:
 
-* Mapper (classe de mapeamento)
-* Driver (classe que implementa o método main. Configura as propriedades do Job)
-* Utilitária (classe contendo métodos auxiliares para tratamento dos dados de entrada e saída dos jobs)
+1. Mapper (classe de mapeamento)
+2. Driver (classe que implementa o método main. Configura as propriedades do Job)
+3. Utilitária (classe contendo métodos auxiliares para tratamento dos dados de entrada e saída dos jobs)
 
 Blibliotecas necessárias para a implementação de jobs MapReduce:
 
