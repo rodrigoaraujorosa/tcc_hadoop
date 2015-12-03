@@ -15,7 +15,7 @@ public class JobExtracaoSysAUtil {
 	//                                  (Data                ) (Hora:Minuto:Segundo.miliseg) (Pri..) (Class)     (IP                                 :Porta   ) (Processo ) (log xml)
 	static final String REGEX_FORMAT = "(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) ([^ ]*) ([^ ]*) -> /(\\d{0,3}.\\d{0,3}.\\d{0,3}.\\d{0,3}:\\d{0,9}) (\\d{0,15}) (.*)$";
 	static final String REGEX_ESTABELECIMENTO = ".*<estabelecimento>(.*?)</estabelecimento>.*?"; // extrai o estabelecimento do log xml
-	static final String REGEX_OPERADADORA = ".*<nomeOperadora>(.*?)</nomeOperadora>.*?";         // extrai o nome da operadora de cartão
+	static final String REGEX_OPERADORA = ".*<nomeOperadora>(.*?)</nomeOperadora>.*?";         // extrai o nome da operadora de cartão
 	static final String REGEX_MENSAGEM = ".*<mensagemErro>(.*?)</mensagemErro>.*?";              // extrai a msg de erro do log xml
 	static final String REGEX_RESPOSTA = ".*<codigoResposta>(.*?)</codigoResposta>.*?";          // extrai o codigo de resposta do log xml
 	static final int QUANTIDADE_GRUPOS = 7; // número de grupos de informação a serem extraídos
@@ -55,7 +55,7 @@ public class JobExtracaoSysAUtil {
 				estabelecimento = m.group(1);
 			}
 
-			p = Pattern.compile(REGEX_OPERADADORA);
+			p = Pattern.compile(REGEX_OPERADORA);
 			m = p.matcher(xml);
 			if (m.matches()){
 				operadora = m.group(1);
